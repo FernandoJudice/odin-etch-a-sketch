@@ -6,9 +6,14 @@ body {
 .drawArea {
     height: 80vh;
     aspect-ratio: 1/1;
-    /* flex: 1 0 auto; */
     display: flex;
     flex-wrap: wrap;
+}
+
+.row {
+    flex: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .square {
