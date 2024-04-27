@@ -1,5 +1,6 @@
 const drawArea = document.querySelector(".drawArea");
 const button  =document.querySelector("button");
+const rainbow = document.querySelector("#rainbow");
 
 renderGrid(16);
 
@@ -15,9 +16,17 @@ function renderGrid(gridSize){
             const square = document.createElement("div");
             square.classList.add("square");
             square.style.flex = "1 0 auto";
-            square.onmouseenter = () => square.classList.add("painted");
+            square.onmouseenter = function(e) {paintSquare(e.target)};
             row.appendChild(square);
         }
+    }
+}
+
+function paintSquare(square){
+    if (rainbow.checked) {
+        square.style.background = 'rgb('+Math.floor(Math.random()*255)+','+Math.floor(Math.random()*255)+','+Math.floor(Math.random()*255)+')';        
+    } else {
+        square.style.background = "#E2CBF7";
     }
 }
 
