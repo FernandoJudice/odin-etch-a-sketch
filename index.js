@@ -15,8 +15,7 @@ function renderGrid(gridSize){
             const square = document.createElement("div");
             square.classList.add("square");
             square.style.flex = "1 0 auto";
-            square.style.border = "solid gray 1px"
-            square.onmouseenter = () => square.style.background = "black";
+            square.onmouseenter = () => square.classList.add("painted");
             row.appendChild(square);
         }
     }

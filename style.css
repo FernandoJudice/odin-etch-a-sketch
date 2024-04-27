@@ -1,12 +1,21 @@
+* {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* color: #D1BDFF */
+}
+
 body {
     display: flex;
     align-items: center;
     flex-direction: column;
+    background-color: #D6F6FF;
 }
 
 button {
     margin: 24px;
     font-size: 18px;
+    border: 0px;
+    padding: 8px;
+    background-color: #E2CBF7;
 }
 
 .drawArea {
@@ -24,4 +33,10 @@ button {
 
 .square {
     aspect-ratio: 1/1;
+    background-color: #F9FFB5;
+}
+
+.square.painted {
+    background-color: #E2CBF7;
+    /* #FCAE7C; */
 }
