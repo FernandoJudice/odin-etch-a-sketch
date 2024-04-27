@@ -13,15 +13,7 @@ for (let i=0;i<gridSize;i++) {
         square.classList.add("square");
         square.style.flex = "1 0 auto";
         square.style.border = "solid gray 1px"
+        square.onmouseenter = () => square.style.background = "black";
         row.appendChild(square);
     }
 }
-
-// for (let i=0;i<gridSize*gridSize;i++) {
-//     const square = document.createElement("div");
-//     square.classList.add("square");
-//     square.textContent = i;
-//     square.style.flex = `1 0 calc(1/${gridSize+1}*100%)`;
-//     square.style.border = "solid gray 1px"
-//     drawArea.appendChild(square);
-// }
