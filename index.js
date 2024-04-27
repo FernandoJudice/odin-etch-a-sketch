@@ -1,10 +1,14 @@
 const drawArea = document.querySelector(".drawArea");
 const button  =document.querySelector("button");
 const rainbow = document.querySelector("#rainbow");
+const darkening = document.querySelector("#darkening");
+
+let opacity = 0.1;
 
 renderGrid(16);
 
 button.onclick = newGrid;
+darkening.onclick = () => opacity = 0.1;
 
 function renderGrid(gridSize){   
     for (let i=0;i<gridSize;i++) {
@@ -27,6 +31,13 @@ function paintSquare(square){
         square.style.background = 'rgb('+Math.floor(Math.random()*255)+','+Math.floor(Math.random()*255)+','+Math.floor(Math.random()*255)+')';        
     } else {
         square.style.background = "#E2CBF7";
+    }
+
+    if (darkening.checked) {
+        square.style.opacity = opacity;
+        opacity += 0.1;
+    } else {
+        square.style.opacity = 1;
     }
 }
 

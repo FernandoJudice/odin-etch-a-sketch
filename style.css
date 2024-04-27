@@ -19,6 +19,7 @@ button {
 }
 
 .drawArea {
+    margin: 6px;
     height: 80vh;
     aspect-ratio: 1/1;
     display: flex;
@@ -29,6 +30,7 @@ button {
     flex: auto;
     display: flex;
     flex-direction: column;
+    background-color: #F9FFB5;
 }
 
 .square {
